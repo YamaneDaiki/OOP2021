@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3C310BA6-F294-470C-8F57-B6FD9D3DBEE1}</ProjectGuid>
+    <ProjectGuid>{4D60E9EB-EE69-43E4-9C41-E180950B7618}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>DistanceConverter</RootNamespace>
     <AssemblyName>DistanceConverter</AssemblyName>
@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FeetConverter.cs" />
+    <Compile Include="FeetConverterBase.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
