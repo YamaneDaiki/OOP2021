@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SalesCalculator {
+namespace Exercise3 {
     class Program {
         static void Main(string[] args) {
             var sales = new SalesCounter("Sales.csv");

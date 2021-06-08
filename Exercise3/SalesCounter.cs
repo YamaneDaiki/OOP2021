@@ -34,16 +34,16 @@ namespace Exercise3 {
 
         //List2.17
         //店舗別売り上げを求める
-        public IDictionary<string, int> GetPerStoreSales() {
+        public IDictionary<string, int> GetPerCategorySales() {
             var dict = new Dictionary<string, int>();
             foreach (var sale in _sales) {
-                if (dict.ContainsKey(sale.ShopName))
+                if (dict.ContainsKey(sale.ProductCategory))
                     //既にコレクションに(dictionary)店舗が設定されている
-                    dict[sale.ShopName] += sale.amount;
+                    dict[sale.ProductCategory] += sale.amount;
                 else
-                    dict[sale.ShopName] = sale.amount;
+                    dict[sale.ProductCategory] = sale.amount;
             }
             return dict;
-        }
+        } 
     }
 }
