@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exercise2 {
+namespace Excerise1 {
     //フィートとメートルの単位変換クラス
     public static class FeetConverter {
         private const double ratio = 0.3048;

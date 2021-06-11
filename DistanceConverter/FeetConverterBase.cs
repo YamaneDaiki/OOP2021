@@ -1,4 +1,4 @@
-﻿namespace Exercise2 {
+﻿namespace Excerise1 {
     public class FeetConverterBase {
 
         //フィートからメートルを求める

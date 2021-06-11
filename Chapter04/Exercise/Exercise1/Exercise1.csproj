@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F082B4E2-D02C-4748-8AC9-3EABB2E2EDF1}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Exercise3</RootNamespace>
-    <AssemblyName>Exercise3</AssemblyName>
+    <ProjectGuid>{490A0008-5653-45CA-BC3B-419190592D07}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Exercise1</RootNamespace>
+    <AssemblyName>Exercise1</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,6 +33,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -44,16 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sale.cs" />
-    <Compile Include="SalesCounter.cs" />
+    <Compile Include="YearMonth.cs" />
+    <Compile Include="YearMonthBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Sales.csv">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
