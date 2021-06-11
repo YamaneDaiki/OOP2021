@@ -11,7 +11,7 @@ namespace Exercise2 {
 
             //4.2.1
             var YearMonths = new YearMonth[5]{
-                new YearMonth(9999,12),
+                new YearMonth(9998,12),
                 new YearMonth(2100,4),
                 new YearMonth(1400,7),
                 new YearMonth(203110,9),
