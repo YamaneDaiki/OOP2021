@@ -38,7 +38,7 @@ namespace Test02 {
         private static void Exercise01(List<int> numbers) {
             var count = numbers.Count();
             Console.WriteLine(count);
-
+            
 
         }
 
