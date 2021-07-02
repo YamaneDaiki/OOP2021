@@ -36,9 +36,6 @@ namespace Test02 {
         //問題１　合計値を表示
         //　　　　出力結果【618】
         private static void Exercise01(List<int> numbers) {
-            var count = numbers.Count();
-            Console.WriteLine(count);
-            
 
         }
 
