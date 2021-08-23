@@ -1,0 +1,10 @@
+C:\Users\daiki\source\repos\YamaneDaiki\OOP2021\Sample Online\Sample0823\bin\Debug\Sample0823.exe.config
+C:\Users\daiki\source\repos\YamaneDaiki\OOP2021\Sample Online\Sample0823\bin\Debug\Sample0823.exe
+C:\Users\daiki\source\repos\YamaneDaiki\OOP2021\Sample Online\Sample0823\bin\Debug\Sample0823.pdb
+C:\Users\daiki\source\repos\YamaneDaiki\OOP2021\Sample Online\Sample0823\obj\Debug\Sample0823.csproj.AssemblyReference.cache
+C:\Users\daiki\source\repos\YamaneDaiki\OOP2021\Sample Online\Sample0823\obj\Debug\Sample0823.Form1.resources
+C:\Users\daiki\source\repos\YamaneDaiki\OOP2021\Sample Online\Sample0823\obj\Debug\Sample0823.Properties.Resources.resources
+C:\Users\daiki\source\repos\YamaneDaiki\OOP2021\Sample Online\Sample0823\obj\Debug\Sample0823.csproj.GenerateResource.cache
+C:\Users\daiki\source\repos\YamaneDaiki\OOP2021\Sample Online\Sample0823\obj\Debug\Sample0823.csproj.CoreCompileInputs.cache
+C:\Users\daiki\source\repos\YamaneDaiki\OOP2021\Sample Online\Sample0823\obj\Debug\Sample0823.exe
+C:\Users\daiki\source\repos\YamaneDaiki\OOP2021\Sample Online\Sample0823\obj\Debug\Sample0823.pdb
