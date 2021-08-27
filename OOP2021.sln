@@ -75,23 +75,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stopwatch", "chapter08\Exer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarReportSystem", "CarReportSystem\CarReportSystem.csproj", "{C82266BE-6C97-4294-89E1-F1FD0B87B6E0}"
 EndProject
-Project("{911E67C6-3D85-4FCE-B560-20A9C3E3FF48}") = "Section01", "Chapter11\Section01\bin\Debug\Section01.exe", "{FF70FC57-8556-468A-9C4D-FD98B16BC630}"
-	ProjectSection(DebuggerProjectSystem) = preProject
-		PortSupplier = 00000000-0000-0000-0000-000000000000
-		Executable = C:\Users\daiki\source\repos\YamaneDaiki\OOP2021\Chapter11\Section01\bin\Debug\Section01.exe
-		RemoteMachine = 大樹のデスクト
-		StartingDirectory = C:\Users\daiki\source\repos\YamaneDaiki\OOP2021\Chapter11\Section01\bin\Debug
-		Environment = 既定
-		LaunchingEngine = 00000000-0000-0000-0000-000000000000
-		UseLegacyDebugEngines = No
-		LaunchSQLEngine = No
-		AttachLaunchAction = No
-		IORedirection = Auto
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section01", "Chapter11\Section01\Section01.csproj", "{4A8D910B-D7C2-424D-96EE-1FB6B00278D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section001", "..\..\..\..\Downloads\OOP2021-master\OOP2021-master\Chapter11\Section001\Section001.csproj", "{4A8D910B-D7C2-424D-96EE-1FB6B00278D2}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "chapter11", "chapter11", "{3A30951F-80E5-4699-ABFD-FC68FEC49E54}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter11", "Chapter11", "{A9990467-D33D-423C-8C8A-3FF3BC9C0496}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -291,10 +277,6 @@ Global
 		{C82266BE-6C97-4294-89E1-F1FD0B87B6E0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C82266BE-6C97-4294-89E1-F1FD0B87B6E0}.Release|x86.ActiveCfg = Release|Any CPU
 		{C82266BE-6C97-4294-89E1-F1FD0B87B6E0}.Release|x86.Build.0 = Release|Any CPU
-		{FF70FC57-8556-468A-9C4D-FD98B16BC630}.Debug|Any CPU.ActiveCfg = Release|x86
-		{FF70FC57-8556-468A-9C4D-FD98B16BC630}.Debug|x86.ActiveCfg = Release|x86
-		{FF70FC57-8556-468A-9C4D-FD98B16BC630}.Release|Any CPU.ActiveCfg = Release|x86
-		{FF70FC57-8556-468A-9C4D-FD98B16BC630}.Release|x86.ActiveCfg = Release|x86
 		{4A8D910B-D7C2-424D-96EE-1FB6B00278D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4A8D910B-D7C2-424D-96EE-1FB6B00278D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A8D910B-D7C2-424D-96EE-1FB6B00278D2}.Debug|x86.ActiveCfg = Debug|Any CPU
@@ -335,7 +317,7 @@ Global
 		{990406DA-F4D7-446A-BA8E-D2812B6AD601} = {5A37B547-5602-4D55-B809-61417AA9F680}
 		{28CD53B7-3808-4708-8E31-11FCDE154E0A} = {990406DA-F4D7-446A-BA8E-D2812B6AD601}
 		{13BBD3FA-3984-4627-B9FC-656B36EBA3E5} = {990406DA-F4D7-446A-BA8E-D2812B6AD601}
-		{4A8D910B-D7C2-424D-96EE-1FB6B00278D2} = {3A30951F-80E5-4699-ABFD-FC68FEC49E54}
+		{4A8D910B-D7C2-424D-96EE-1FB6B00278D2} = {A9990467-D33D-423C-8C8A-3FF3BC9C0496}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B107EBBB-16D0-42ED-BBE7-9FF0BAA5ECEC}
