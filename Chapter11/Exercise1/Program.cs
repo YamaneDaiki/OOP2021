@@ -29,7 +29,7 @@ namespace Exercise1 {
                 Console.WriteLine("{0} {1}", xname.Value, xteammembers?.Value + "人");
             }
         }
-
+        //
         private static void Exercise1_2(string file) {
                 var xdoc = XDocument.Load(file);
                 var sample2 = xdoc.Root.Elements().OrderBy(x => (string)x.Element("firstplayed"));
