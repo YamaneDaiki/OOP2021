@@ -35,5 +35,10 @@ namespace RssReader {
                 }
             }
         }
+
+        private void lbTitles_SelectedIndexChanged(object sender, EventArgs e) {
+            var num = lbTitles.SelectedIndex;
+            wbBrowser url
+        }
     }
 }
