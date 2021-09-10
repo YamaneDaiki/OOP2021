@@ -35,46 +35,50 @@ namespace RssReader {
             // 
             this.Lb1.AutoSize = true;
             this.Lb1.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Lb1.Location = new System.Drawing.Point(35, 31);
+            this.Lb1.Location = new System.Drawing.Point(19, 18);
+            this.Lb1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lb1.Name = "Lb1";
-            this.Lb1.Size = new System.Drawing.Size(211, 49);
+            this.Lb1.Size = new System.Drawing.Size(120, 28);
             this.Lb1.TabIndex = 0;
             this.Lb1.Text = "RssReader";
             // 
             // tbUrl
             // 
             this.tbUrl.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.tbUrl.Location = new System.Drawing.Point(271, 31);
+            this.tbUrl.Location = new System.Drawing.Point(148, 18);
+            this.tbUrl.Margin = new System.Windows.Forms.Padding(2);
             this.tbUrl.Multiline = true;
             this.tbUrl.Name = "tbUrl";
-            this.tbUrl.Size = new System.Drawing.Size(841, 49);
+            this.tbUrl.Size = new System.Drawing.Size(461, 30);
             this.tbUrl.TabIndex = 1;
             // 
             // lbTitles
             // 
             this.lbTitles.FormattingEnabled = true;
-            this.lbTitles.ItemHeight = 21;
-            this.lbTitles.Location = new System.Drawing.Point(44, 122);
+            this.lbTitles.ItemHeight = 12;
+            this.lbTitles.Location = new System.Drawing.Point(24, 106);
+            this.lbTitles.Margin = new System.Windows.Forms.Padding(2);
             this.lbTitles.Name = "lbTitles";
-            this.lbTitles.Size = new System.Drawing.Size(249, 865);
+            this.lbTitles.Size = new System.Drawing.Size(137, 460);
             this.lbTitles.TabIndex = 2;
             this.lbTitles.Click += new System.EventHandler(this.btRead_Click);
-            this.lbTitles.SelectedIndexChanged += new System.EventHandler(this.lbTitles_SelectedIndexChanged);
             // 
             // wbBrowser
             // 
-            this.wbBrowser.Location = new System.Drawing.Point(327, 106);
-            this.wbBrowser.MinimumSize = new System.Drawing.Size(20, 20);
+            this.wbBrowser.Location = new System.Drawing.Point(178, 61);
+            this.wbBrowser.Margin = new System.Windows.Forms.Padding(2);
+            this.wbBrowser.MinimumSize = new System.Drawing.Size(11, 11);
             this.wbBrowser.Name = "wbBrowser";
             this.wbBrowser.ScriptErrorsSuppressed = true;
-            this.wbBrowser.Size = new System.Drawing.Size(1001, 890);
+            this.wbBrowser.Size = new System.Drawing.Size(546, 509);
             this.wbBrowser.TabIndex = 3;
             // 
             // btRead
             // 
-            this.btRead.Location = new System.Drawing.Point(1169, 27);
+            this.btRead.Location = new System.Drawing.Point(638, 15);
+            this.btRead.Margin = new System.Windows.Forms.Padding(2);
             this.btRead.Name = "btRead";
-            this.btRead.Size = new System.Drawing.Size(114, 46);
+            this.btRead.Size = new System.Drawing.Size(62, 26);
             this.btRead.TabIndex = 4;
             this.btRead.Text = "読込み";
             this.btRead.UseVisualStyleBackColor = true;
@@ -82,14 +86,15 @@ namespace RssReader {
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1332, 1032);
+            this.ClientSize = new System.Drawing.Size(727, 590);
             this.Controls.Add(this.btRead);
             this.Controls.Add(this.wbBrowser);
             this.Controls.Add(this.lbTitles);
             this.Controls.Add(this.tbUrl);
             this.Controls.Add(this.Lb1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "32091";
             this.ResumeLayout(false);
