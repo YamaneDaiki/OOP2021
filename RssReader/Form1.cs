@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,8 +14,7 @@ using System.Xml.Linq;
 
 namespace RssReader {
     public partial class Form1 : Form {
-        List<string> rink = new List<string>();
-        List<string> desc = new List<string>();
+        List<string> ris = new List<string>();
 
         public Form1() {
             InitializeComponent();
@@ -24,38 +24,27 @@ namespace RssReader {
             setRssTitle(tbUrl.Text);
         }
 
-        //指定したURL先からXMLデータを取得し、リストボックスへセットする。
-       
-        
-        private void setRssTitle(string Uri) {
+        private void setRssTitle(string uri) {
             using (var wc = new WebClient()) {
                 wc.Headers.Add("Content-type", "charset=UTF-8");
 
-                var Url = new Uri(Uri);
-                var stream = wc.OpenRead(Url);
+                var url = new Uri(uri);
+
+                var stream = wc.OpenRead(url);
+
 
                 XDocument xdoc = XDocument.Load(stream);
                 var nodes = xdoc.Root.Descendants("item");
                 foreach (var node in nodes) {
+
                     lbTitles.Items.Add(node.Element("title").Value);
-
-                    rink.Add(node.Element("link").Value);
-                    desc.Add(node.Element("description").Value);
-
-
+                    ris.Add(node.Element("link").Value);
                 }
-
-
             }
         }
-
-        private void ibTitles_Click(object sender, EventArgs e) {
-
-            var nm = lbTitles.SelectedIndex;
-            Lb1.Text = desc[nm];
-            wbBrowser.Url = new Uri(rink[nm]);
+        private void lbTitles_Click(object sender, EventArgs e) {
+            var num = lbTitles.SelectedIndex;
+            wbBrowser.Url = new Uri(ris[num]);
         }
-
-
     }
 }
