@@ -40,7 +40,7 @@ namespace RssReader {
                     PubDate = (DateTime)x.Element("pubDate"),
                     Description = (string)x.Element("description")
                 });
-
+                //
                 foreach (var item in items) {
                     lbTitles.Items.Add(item.Title);
                 }
