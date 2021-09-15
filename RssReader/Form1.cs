@@ -23,12 +23,13 @@ namespace RssReader {
             setRssTitle(tbUrl.Text);
         }
 
-        //指定したURL先からXMLデータを取得し、リストボックスへセットする。
+        
         private void setRssTitle(string Uri) {
             using (var wc = new WebClient()) {
                 wc.Headers.Add("Content-type", "charset=UTF-8");
 
                 var Url = new Uri(Uri);
+
                 var stream = wc.OpenRead(Url);
 
                 XDocument xdoc = XDocument.Load(stream);
@@ -43,9 +44,6 @@ namespace RssReader {
                 foreach (var item in items) {
                     lbTitles.Items.Add(item.Title);
                 }
-
-
-
             }
         }
 
