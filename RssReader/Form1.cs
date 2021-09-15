@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,9 +13,7 @@ using System.Xml.Linq;
 
 namespace RssReader {
     public partial class Form1 : Form {
-
-        List<string> ris = new List<string>();
-        List<string> rzs = new List<string>();
+        IEnumerable<ItemDate> items = null;
 
         public Form1() {
             InitializeComponent();
@@ -26,36 +23,46 @@ namespace RssReader {
             setRssTitle(tbUrl.Text);
         }
 
-        private void setRssTitle(string uri) {
+        //指定したURL先からXMLデータを取得し、リストボックスへセットする。
+        private void setRssTitle(string Uri) {
             using (var wc = new WebClient()) {
                 wc.Headers.Add("Content-type", "charset=UTF-8");
 
-                var url = new Uri(uri);
-
-                var stream = wc.OpenRead(url);
-
+                var Url = new Uri(Uri);
+                var stream = wc.OpenRead(Url);
 
                 XDocument xdoc = XDocument.Load(stream);
-                var nodes = xdoc.Root.Descendants("item");
-                foreach (var node in nodes) {
 
+                items = xdoc.Root.Descendants("item").Select(x => new ItemDate {
+                    Title = (string)x.Element("title"),
+                    Link = (string)x.Element("link"),
+                    PubDate = (DateTime)x.Element("pubDate"),
+                    Description = (string)x.Element("description")
+                });
 
-                    lbTitles.Items.Add(node.Element("title").Value);
-                    ris.Add(node.Element("link").Value);
-                    rzs.Add(node.Element("description").Value);
+                foreach (var item in items) {
+                    lbTitles.Items.Add(item.Title);
                 }
+
+
+
             }
         }
 
         private void lbTitles_Click(object sender, EventArgs e) {
             var num = lbTitles.SelectedIndex;
-            LB2.Text = rzs[num];
-            wbBrowser.Url = new Uri(ris[num]);
+            string rink = (items.ToArray())[lbTitles.SelectedIndex].Link;
+            string description = (items.ToArray())[lbTitles.SelectedIndex].Description;
+            DateTime day = (items.ToArray())[lbTitles.SelectedIndex].PubDate;
+
+            LB2.Text = description;
+            ymd.Text = day.ToString("yyyy MM dd  hh時mm分ss秒");
         }
 
-        private void Bt4_Click(object sender, EventArgs e) {
-            var wbform = new Form2();
-            wbform.Show();
+        private void btweb_Click(object sender, EventArgs e) {
+            Form2 form2 = new Form2();
+            form2.wb(items.ToArray()[lbTitles.SelectedIndex].Link);
+            form2.Show();
         }
     }
 }

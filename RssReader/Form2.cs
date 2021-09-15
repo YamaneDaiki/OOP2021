@@ -14,8 +14,9 @@ namespace RssReader {
             InitializeComponent();
         }
 
-        private void Form2_Load(object sender, EventArgs e) {
+        public void wb(string wbs) {
 
+            Wb2.Url = new Uri(wbs);
         }
     }
 }
