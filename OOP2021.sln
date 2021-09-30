@@ -102,6 +102,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RssReader", "RssReader", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section04_Json", "Chapter14\Section04_Json\Section04_Json.csproj", "{B733175D-4AFE-44FE-9CF1-1A88C80123D6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendMail", "SendMail\SendMail\SendMail.csproj", "{B9D5BF5A-502F-4DAB-BE09-EBED81044326}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -356,6 +358,14 @@ Global
 		{B733175D-4AFE-44FE-9CF1-1A88C80123D6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B733175D-4AFE-44FE-9CF1-1A88C80123D6}.Release|x86.ActiveCfg = Release|Any CPU
 		{B733175D-4AFE-44FE-9CF1-1A88C80123D6}.Release|x86.Build.0 = Release|Any CPU
+		{B9D5BF5A-502F-4DAB-BE09-EBED81044326}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9D5BF5A-502F-4DAB-BE09-EBED81044326}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9D5BF5A-502F-4DAB-BE09-EBED81044326}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B9D5BF5A-502F-4DAB-BE09-EBED81044326}.Debug|x86.Build.0 = Debug|Any CPU
+		{B9D5BF5A-502F-4DAB-BE09-EBED81044326}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9D5BF5A-502F-4DAB-BE09-EBED81044326}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9D5BF5A-502F-4DAB-BE09-EBED81044326}.Release|x86.ActiveCfg = Release|Any CPU
+		{B9D5BF5A-502F-4DAB-BE09-EBED81044326}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
