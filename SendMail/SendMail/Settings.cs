@@ -19,6 +19,8 @@ namespace SendMail
         //コンストラクタ
         private Settings() {}
 
+
+
         //インスタンスの取得
         public static Settings getInstance() {
 
@@ -26,6 +28,7 @@ namespace SendMail
                 instance = new Settings();
             }
             return instance;
+
         }
 
 

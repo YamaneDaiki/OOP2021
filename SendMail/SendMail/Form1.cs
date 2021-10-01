@@ -32,8 +32,12 @@ namespace SendMail
                 mailMessage.From = new MailAddress(settings.MailAddr);
                 //宛先（To）
                 mailMessage.To.Add(tbTo.Text);
-                mailMessage.CC.Add(tbCc.Text);
-                mailMessage.Bcc.Add(tbBcc.Text);
+                if(tbCc.Text != "") {
+                    mailMessage.CC.Add(tbCc.Text);
+                }
+                if(tbBcc.Text != "") {
+                    mailMessage.Bcc.Add(tbBcc.Text);
+                }
 
                 //件名（タイトル）
                 mailMessage.Subject = tbTitle.Text;
@@ -48,15 +52,18 @@ namespace SendMail
                 smtpClient.Host = settings.Host;
                 smtpClient.Port = settings.Port;
                 smtpClient.EnableSsl = settings.Ssl;
-                smtpClient.Send(mailMessage);
-
-
-                MessageBox.Show("送信完了");
+                smtpClient.SendMailAsync(mailMessage);
+                smtpClient.SendCompleted += SmtpClient_SendCompleted; 
+               
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void SmtpClient_SendCompleted(object sender, AsyncCompletedEventArgs e) {
+            MessageBox.Show("送信完了");
         }
 
         private void btConfig_Click(object sender, EventArgs e)

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace SendMail
 {
@@ -28,11 +29,14 @@ namespace SendMail
             cbSsl.Checked = settings.bSsl();
             tbSender.Text = settings.sMailAddr();
         }
-
+     
         //OKボタン
         private void btOk_Click(object sender, EventArgs e) {
             settingsRegist();
             this.Close();
+
+            
+
         }
 
         //キャンセルボタン
@@ -53,6 +57,6 @@ namespace SendMail
             settings.MailAddr = tbUserName.Text;
             settings.Pass = tbPass.Text;
             settings.Ssl = cbSsl.Checked;
-        }
+        }     
     }
 }
