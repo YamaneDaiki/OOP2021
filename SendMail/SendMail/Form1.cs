@@ -50,6 +50,7 @@ namespace SendMail
                 smtpClient.EnableSsl = settings.Ssl;
                 smtpClient.Send(mailMessage);
 
+
                 MessageBox.Show("送信完了");
             }
             catch (Exception ex)
