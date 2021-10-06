@@ -14,7 +14,7 @@ namespace SendMail
 {
     public partial class Form1 : Form
     {
-        Settings settings = Settings.getInstance();
+        settings settings = settings.getInstance();
 
         public Form1()
         {

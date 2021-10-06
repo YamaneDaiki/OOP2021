@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace SendMail
 {
-    public class Settings
+    public class settings
     {
-        private static Settings instance = null;
+        private static settings instance = null;
 
         public int Port { get; set; }   //ポート番号
         public string Host { get; set; }   //ホスト名
@@ -17,15 +17,15 @@ namespace SendMail
         public bool Ssl { get; set; }   //SSL
 
         //コンストラクタ
-        private Settings() {}
+        public settings() {}
 
 
 
         //インスタンスの取得
-        public static Settings getInstance() {
+        public static settings getInstance() {
 
             if(instance == null) {
-                instance = new Settings();
+                instance = new settings();
             }
             return instance;
 
@@ -58,5 +58,6 @@ namespace SendMail
         public bool bSsl() {
             return true;
         }
+
     }
 }
