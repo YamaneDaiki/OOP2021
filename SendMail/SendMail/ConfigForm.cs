@@ -71,6 +71,7 @@ namespace SendMail {
                 serializr.WriteObject(writer, settings);
             }
 
+        
             
         }
     }
