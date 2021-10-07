@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
 using System.Runtime.Serialization;
+using System.IO;
 
 namespace SendMail {
     public partial class ConfigForm : Form {
@@ -59,20 +60,33 @@ namespace SendMail {
             settings.Ssl = cbSsl.Checked;
 
 
-        //シリアル化
+        //ファイルへ書き出し(シリアル化)
             var setting = new XmlWriterSettings {
                 Encoding = new System.Text.UTF8Encoding(false),
                 Indent = true,
                 IndentChars = " ",
             };
+            string filePath = "settings.xml";
+            if (File.Exists(filePath)) {
 
-            using (var writer = XmlWriter.Create("settings.xml", setting)) {
-                var serializr = new DataContractSerializer(settings.GetType());
-                serializr.WriteObject(writer, settings);
+            } else {
+                using (var writer = XmlWriter.Create("settings.xml", setting)) {
+                    var serializr = new DataContractSerializer(settings.GetType());
+                    serializr.WriteObject(writer, settings);
+                }
             }
 
         
             
+        }
+        //設定をロード
+        private void ConfigForm_Load(object sender, EventArgs e) {
+            tbHost.Text = settings.Host;
+            tbPort.Text = settings.Port.ToString();
+            tbUserName.Text = settings.MailAddr;
+            tbPass.Text = settings.Pass;
+            cbSsl.Checked = settings.Ssl;
+            tbSender.Text = settings.Host;
         }
     }
 }

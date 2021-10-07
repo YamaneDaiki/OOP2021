@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
@@ -74,10 +75,7 @@ namespace SendMail
         }
 
         private void Form1_Load(object sender, EventArgs e) {
-            using (var reader = XmlReader.Create("settings.xml")) {
-                var serializer = new DataContractSerializer(typeof(settings));
-                var settig = serializer.ReadObject(reader) as settings;
-            }
+
         }
     }
 }

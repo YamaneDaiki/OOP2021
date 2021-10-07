@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace SendMail
 {
@@ -17,7 +20,9 @@ namespace SendMail
         public bool Ssl { get; set; }   //SSL
 
         //コンストラクタ
-        public settings() {}
+        private settings() {
+    
+        }
 
 
 
@@ -26,11 +31,31 @@ namespace SendMail
 
             if(instance == null) {
                 instance = new settings();
-            }
-            return instance;
+                
+                //XMLファイル読み込み(逆シリアル化)
+                    using (var reader = XmlReader.Create("settings.xml")) {
+                        var serializer = new DataContractSerializer(typeof(settings));
+                        var settig = serializer.ReadObject(reader) as settings;
 
+                        instance.Host = settig.Host;
+                        instance.Port = settig.Port;
+                        instance.MailAddr = settig.MailAddr;
+                        instance.Pass = settig.Pass;
+                        instance.Ssl = settig.Ssl;
+                    }
+                }
+            return instance;
         }
 
+        //送信データー登録
+        public void setSendConfig(string host,int port,string mailAddr,string pass,bool ssl) {
+
+            Host = host;
+            Port = port;
+            MailAddr = mailAddr;
+            Pass = pass;
+            Ssl = ssl;
+        }
 
 
         //初期値
@@ -58,6 +83,5 @@ namespace SendMail
         public bool bSsl() {
             return true;
         }
-
     }
 }
