@@ -13,6 +13,7 @@ namespace SendMail
     {
         private static settings instance = null;
 
+
         public int Port { get; set; }   //ポート番号
         public string Host { get; set; }   //ホスト名
         public string MailAddr{ get; set; } //メールアドレス
@@ -31,8 +32,9 @@ namespace SendMail
 
             if(instance == null) {
                 instance = new settings();
-                
+
                 //XMLファイル読み込み(逆シリアル化)
+                if (File.Exists("settings.xml")) {
                     using (var reader = XmlReader.Create("settings.xml")) {
                         var serializer = new DataContractSerializer(typeof(settings));
                         var settig = serializer.ReadObject(reader) as settings;
@@ -42,9 +44,14 @@ namespace SendMail
                         instance.MailAddr = settig.MailAddr;
                         instance.Pass = settig.Pass;
                         instance.Ssl = settig.Ssl;
+
+                    }
+                    }else {
+                        new ConfigForm().ShowDialog();
                     }
                 }
-            return instance;
+                   
+                return instance;
         }
 
         //送信データー登録
@@ -55,6 +62,18 @@ namespace SendMail
             MailAddr = mailAddr;
             Pass = pass;
             Ssl = ssl;
+
+            //ファイルへ書き出し(シリアル化)
+            var setting = new XmlWriterSettings {
+                Encoding = new System.Text.UTF8Encoding(false),
+                Indent = true,
+                IndentChars = " ",
+            };
+
+            using (var writer = XmlWriter.Create("settings.xml", setting)) {
+                var serializr = new DataContractSerializer(instance.GetType());
+                serializr.WriteObject(writer, instance);
+            }
         }
 
 

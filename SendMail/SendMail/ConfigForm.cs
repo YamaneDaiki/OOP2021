@@ -14,7 +14,7 @@ using System.IO;
 
 namespace SendMail {
     public partial class ConfigForm : Form {
-        private settings settings = settings.getInstance();
+        settings settings = settings.getInstance();
 
         public ConfigForm() {
             InitializeComponent();
@@ -32,7 +32,7 @@ namespace SendMail {
 
         //OKボタン
         private void btOk_Click(object sender, EventArgs e) {
-            settingsRegist();
+            btApply_Click(sender, e); //適用ボタン処理を呼び出し
             this.Close();
 
 
@@ -47,38 +47,11 @@ namespace SendMail {
 
         //適用ボタン
         private void btApply_Click(object sender, EventArgs e) {
-
-            settingsRegist();//送信データ登録
-        }
-
-        //送信データ登録
-        private void settingsRegist() {
-            settings.Host = tbHost.Text;
-            settings.Port = int.Parse(tbPort.Text);
-            settings.MailAddr = tbUserName.Text;
-            settings.Pass = tbPass.Text;
-            settings.Ssl = cbSsl.Checked;
-
-
-        //ファイルへ書き出し(シリアル化)
-            var setting = new XmlWriterSettings {
-                Encoding = new System.Text.UTF8Encoding(false),
-                Indent = true,
-                IndentChars = " ",
-            };
-            string filePath = "settings.xml";
-            if (File.Exists(filePath)) {
-
-            } else {
-                using (var writer = XmlWriter.Create("settings.xml", setting)) {
-                    var serializr = new DataContractSerializer(settings.GetType());
-                    serializr.WriteObject(writer, settings);
-                }
-            }
-
-        
+            settings.setSendConfig(tbHost.Text, int.Parse(tbPort.Text), tbUserName.Text, tbPass.Text, cbSsl.Checked);
             
         }
+
+        
         //設定をロード
         private void ConfigForm_Load(object sender, EventArgs e) {
             tbHost.Text = settings.Host;
