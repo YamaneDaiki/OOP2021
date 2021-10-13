@@ -102,6 +102,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section04_Json", "Chapter14
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendMail", "SendMail\SendMail\SendMail.csproj", "{B9D5BF5A-502F-4DAB-BE09-EBED81044326}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SendMail", "SendMail", "{D284A98B-75F1-4A67-9E78-899B9604BEEA}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Desktop\32091\テスト仕様書_○○○○.xlsx = ..\..\..\..\Desktop\32091\テスト仕様書_○○○○.xlsx
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -394,6 +399,7 @@ Global
 		{84DCF9C7-E211-41B7-A600-D1F464A3FA8D} = {6E6C1609-D163-4AFF-9517-275E7B05A8FA}
 		{555A3AA0-F2B1-4498-8F30-DCA729865260} = {F2338650-390F-4555-8BF9-FF0F90AFF4E6}
 		{B733175D-4AFE-44FE-9CF1-1A88C80123D6} = {4A6D7DC4-EA96-4F26-98EB-88636A2238A5}
+		{B9D5BF5A-502F-4DAB-BE09-EBED81044326} = {D284A98B-75F1-4A67-9E78-899B9604BEEA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B107EBBB-16D0-42ED-BBE7-9FF0BAA5ECEC}
