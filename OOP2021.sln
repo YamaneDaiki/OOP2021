@@ -81,7 +81,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise1", "Chapter11\Exer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section02", "Chapter11\Section02\Section02.csproj", "{BE879129-B614-4843-8390-CA796128AF9F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter14", "Chapter14", "{4A6D7DC4-EA96-4F26-98EB-88636A2238A5}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter12", "Chapter12", "{4A6D7DC4-EA96-4F26-98EB-88636A2238A5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section04", "Chapter14\Section04\Section04.csproj", "{A7F1A5CA-E0A4-47B8-B5E2-E5ED60B38D63}"
 EndProject
@@ -106,6 +106,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SendMail", "SendMail", "{D2
 	ProjectSection(SolutionItems) = preProject
 		..\..\..\..\Desktop\32091\テスト仕様書_○○○○.xlsx = ..\..\..\..\Desktop\32091\テスト仕様書_○○○○.xlsx
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleEntityFramework", "EntityFramework\SampleEntityFramework\SampleEntityFramework.csproj", "{320F9772-CF13-4F45-8C7D-7DB435022D83}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter13", "Chapter13", "{8D30987D-5A4E-4382-883F-99D1C2AC91C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -361,6 +365,14 @@ Global
 		{B9D5BF5A-502F-4DAB-BE09-EBED81044326}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B9D5BF5A-502F-4DAB-BE09-EBED81044326}.Release|x86.ActiveCfg = Release|Any CPU
 		{B9D5BF5A-502F-4DAB-BE09-EBED81044326}.Release|x86.Build.0 = Release|Any CPU
+		{320F9772-CF13-4F45-8C7D-7DB435022D83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{320F9772-CF13-4F45-8C7D-7DB435022D83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{320F9772-CF13-4F45-8C7D-7DB435022D83}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{320F9772-CF13-4F45-8C7D-7DB435022D83}.Debug|x86.Build.0 = Debug|Any CPU
+		{320F9772-CF13-4F45-8C7D-7DB435022D83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{320F9772-CF13-4F45-8C7D-7DB435022D83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{320F9772-CF13-4F45-8C7D-7DB435022D83}.Release|x86.ActiveCfg = Release|Any CPU
+		{320F9772-CF13-4F45-8C7D-7DB435022D83}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -400,6 +412,7 @@ Global
 		{555A3AA0-F2B1-4498-8F30-DCA729865260} = {F2338650-390F-4555-8BF9-FF0F90AFF4E6}
 		{B733175D-4AFE-44FE-9CF1-1A88C80123D6} = {4A6D7DC4-EA96-4F26-98EB-88636A2238A5}
 		{B9D5BF5A-502F-4DAB-BE09-EBED81044326} = {D284A98B-75F1-4A67-9E78-899B9604BEEA}
+		{320F9772-CF13-4F45-8C7D-7DB435022D83} = {8D30987D-5A4E-4382-883F-99D1C2AC91C0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B107EBBB-16D0-42ED-BBE7-9FF0BAA5ECEC}
