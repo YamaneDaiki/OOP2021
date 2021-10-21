@@ -13,7 +13,7 @@ namespace SampleEntityFramework {
             //Exercise13_1_2();
             //Exercise13_1_3();
             //Exercise13_1_4();
-            Exercise13_1_5();
+            //Exercise13_1_5();
             Console.Read();
         }
 
@@ -75,8 +75,6 @@ namespace SampleEntityFramework {
                 foreach (var book in books) {
                     Console.WriteLine(book.Title);
                 }
-                            
-                            
             }
         }
 
@@ -94,17 +92,14 @@ namespace SampleEntityFramework {
         private static void Exercise13_1_5() {
             using (var db = new BooksDbContext()) {
                 var authors = db.Authors.OrderByDescending(c => c.Birthday);
-                var books = db.Books;
                 foreach (var author in authors) {
                     Console.WriteLine($"↓↓↓{author.Name}↓↓↓");
-                    foreach (var book in books) {
-                        if(author.Name == book.Author.Name) {
-                            Console.WriteLine($"{book.Title} {book.Author.Name}");
-                        }
+                    foreach (var book in author.Books) {
+                        Console.WriteLine($"{book.Title} {book.Author.Name}");
                     }
                 }
              
-            }
+            }   
         }
 
 
