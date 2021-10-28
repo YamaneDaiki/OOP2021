@@ -393,8 +393,9 @@ namespace CarReportSystem {
             this.carReportDataGridView.Name = "carReportDataGridView";
             this.carReportDataGridView.RowTemplate.Height = 21;
             this.carReportDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.carReportDataGridView.Size = new System.Drawing.Size(820, 194);
+            this.carReportDataGridView.Size = new System.Drawing.Size(820, 211);
             this.carReportDataGridView.TabIndex = 21;
+            this.carReportDataGridView.SelectionChanged += new System.EventHandler(this.carReportDataGridView_SelectionChanged);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -464,7 +465,7 @@ namespace CarReportSystem {
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(982, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(953, 25);
             this.bindingNavigator1.TabIndex = 22;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -558,7 +559,7 @@ namespace CarReportSystem {
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(982, 658);
+            this.ClientSize = new System.Drawing.Size(953, 655);
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.carReportDataGridView);
             this.Controls.Add(this.label5);
