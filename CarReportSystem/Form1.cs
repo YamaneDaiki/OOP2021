@@ -112,10 +112,14 @@ namespace CarReportSystem {
             }
         }
 
+        
 
         //更新ボタンイベント処理
         private void btUpdate_Click(object sender, EventArgs e) {
             if (carReportDataGridView.CurrentRow == null) return;
+            if(cbCarName.Text == "") {
+                MessageBox.Show("車名が未入力です");
+            }
 
             carReportDataGridView.CurrentRow.Cells[1].Value = dtpDate.Value;     //日付
             carReportDataGridView.CurrentRow.Cells[2].Value = cbAuthor.Text;     //記録者
@@ -129,20 +133,28 @@ namespace CarReportSystem {
             this.Validate();
             this.carReportBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.infosys202129DataSet);
+           
 
         }
             private void btConnect_Click(object sender, EventArgs e) {
                 // TODO: このコード行はデータを 'infosys202129DataSet.CarReport' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
                 this.carReportTableAdapter.Fill(this.infosys202129DataSet.CarReport);
+            for (int i = 0; i < 5; i++) {
 
+                setCbAuthor((string)carReportDataGridView.Rows[i].Cells[2].Value.ToString());
+                setCbCarName((string)carReportDataGridView.Rows[i].Cells[4].Value.ToString());
             }
+        }
 
             private void fmMain_Load(object sender, EventArgs e) {
-               
-            }
+            carReportDataGridView.Columns[0].Visible = false;
+            carReportDataGridView.Columns[1].HeaderText = "日付";
+        }
 
         private void carReportDataGridView_SelectionChanged(object sender, EventArgs e) {
-            if (carReportDataGridView.CurrentRow.Cells[1].Value.ToString() == "") return;
+
+            if (carReportDataGridView.CurrentRow == null) return;
+            
             try {
                 dtpDate.Value = (DateTime)carReportDataGridView.CurrentRow.Cells[1].Value;          //日付
                 cbAuthor.Text = carReportDataGridView.CurrentRow.Cells[2].Value.ToString();         //記録者
@@ -176,5 +188,16 @@ namespace CarReportSystem {
         private void carReportDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e) {
 
         }
+
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e) {
+            cbAuthor.Text = null;
+            rbOther.Checked = true;
+            cbCarName.Text = null;
+            rbOther.Checked = true;
+            tbReport.Text = null;
+            pbPicture.Image = null;
+        }
+
+       
     }
 }
