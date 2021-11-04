@@ -11,9 +11,14 @@ namespace CarReportSystem {
         /// </summary>
         [STAThread]
         static void Main() {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fmMain());
+           
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new fmMain());
+            
+            
+            
+            
         }
     }
 }
