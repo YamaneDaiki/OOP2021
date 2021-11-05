@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2CF9D59F-0F4D-4E07-AB1E-FBA43D9EA769}</ProjectGuid>
+    <ProjectGuid>{90199B59-6041-4BFB-8314-51D2147FFF17}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>SampleApp1</RootNamespace>
-    <AssemblyName>SampleApp1</AssemblyName>
+    <RootNamespace>SampleGridApp</RootNamespace>
+    <AssemblyName>SampleGridApp</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
