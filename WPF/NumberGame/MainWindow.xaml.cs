@@ -21,8 +21,10 @@ namespace NumberGame {
         public MainWindow() {
             InitializeComponent();
         }
+
         
-        private void Button_Click(object sender, RoutedEventArgs e) {
+
+        private void Button_Click(object sender, RoutedEventArgs e) { 
             var rand = new Random();
             int value = rand.Next(1, 26);
             var button = (Button)sender;

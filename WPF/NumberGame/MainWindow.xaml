@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NumberGame"
         mc:Ignorable="d"
-        x:Name="MainWindw"
+        x:Name="MainHome"
         Title="MainWindow" Height="519.113" Width="529.968">
     <Grid HorizontalAlignment="Right" Width="480" Margin="-1,0,2,67">
         <Grid.RowDefinitions>

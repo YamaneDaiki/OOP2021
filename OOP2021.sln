@@ -103,9 +103,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendMail", "SendMail\SendMail\SendMail.csproj", "{B9D5BF5A-502F-4DAB-BE09-EBED81044326}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SendMail", "SendMail", "{D284A98B-75F1-4A67-9E78-899B9604BEEA}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\..\Desktop\32091\テスト仕様書_○○○○.xlsx = ..\..\..\..\Desktop\32091\テスト仕様書_○○○○.xlsx
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleEntityFramework", "EntityFramework\SampleEntityFramework\SampleEntityFramework.csproj", "{320F9772-CF13-4F45-8C7D-7DB435022D83}"
 EndProject
