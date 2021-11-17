@@ -5,37 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NumberGame"
         mc:Ignorable="d"
-        Title="MainWindow" Height="509.6" Width="489.2">
-    <StackPanel HorizontalAlignment="Left" Height="474" VerticalAlignment="Top" Width="492" Margin="0,0,-48,0">
-        <Grid Height="408" HorizontalAlignment="Right" Width="422" Margin="0,0,70,0">
-         
-            <Button Content="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" Height="76"/>
-            <Button Content="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" Height="76" Margin="69,0,0,0"/>
-            <Button Content="3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" Height="76" Margin="138,0,0,0"/>
-            <Button Content="4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" Height="76" Margin="207,0,0,0"/>
-            <Button Content="5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" Height="76" Margin="276,0,0,0"/>
-            <Button Content="6" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" Height="76" Margin="0,76,0,0"/>
-            <Button Content="7" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" Height="76" Margin="69,76,0,0"/>
-            <Button Content="8" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" Height="76" Margin="138,76,0,0"/>
-            <Button Content="9" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" Height="76" Margin="207,76,0,0"/>
-            <Button Content="10" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" Height="76" Margin="276,76,0,0"/>
-            <Button Content="11" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" Height="76" Margin="0,151,0,0"/>
-            <Button Content="12" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" Height="76" Margin="69,151,0,0"/>
-            <Button Content="13" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" Height="76" Margin="138,151,0,0"/>
-            <Button Content="14" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" Height="76" Margin="207,151,0,0"/>
-            <Button Content="15" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" Height="76" Margin="276,151,0,0"/>
-            <Button Content="16" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" Height="76" Margin="0,227,0,0"/>
-            <Button Content="16" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" Height="76" Margin="0,227,0,0"/>
-            <Button Content="17" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" Height="76" Margin="69,227,0,0"/>
-            <Button Content="18" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" Height="76" Margin="138,227,0,0"/>
-            <Button Content="19" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" Height="76" Margin="207,227,0,0"/>
-            <Button Content="20" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" Height="76" Margin="276,227,0,0"/>
-            <Button Content="21" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" Height="76" Margin="0,303,0,0" RenderTransformOrigin="-2.571,1.584"/>
-            <Button Content="22" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" Height="76" Margin="69,303,0,0" RenderTransformOrigin="-2.571,1.584"/>
-            <Button Content="23" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" Height="76" Margin="138,303,0,0" RenderTransformOrigin="-2.571,1.584"/>
-            <Button Content="24" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" Height="76" Margin="207,303,0,0" RenderTransformOrigin="-2.571,1.584"/>
-            <Button Content="25" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" Height="76" Margin="276,303,0,0" RenderTransformOrigin="-2.571,1.584"/>
-        </Grid>
-        <TextBlock TextWrapping="Wrap" RenderTransformOrigin="0.516,18.688" Margin="0" FontSize="20"><Run Text="Text"/><Run Text="Bl"/><Run Text="o"/><Run Text="ck"/></TextBlock>
-    </StackPanel>
+        x:Name="MainWindw"
+        Title="MainWindow" Height="519.113" Width="529.968">
+    <Grid HorizontalAlignment="Right" Width="480" Margin="-1,0,2,67">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="275*"/>
+            <RowDefinition Height="146*"/>
+        </Grid.RowDefinitions>
+
+        <Button Content="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="102" Height="80" Click="Button_Click" Margin="-34,0,0,0"/>
+        <Button Content="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="103" Height="80" Click="Button_Click" Margin="68,0,0,0" />
+        <Button Content="3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="103" Height="89" Click="Button_Click" Margin= "171,0,0,0"/>
+        <Button Content="4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="103" Height="80" Click="Button_Click" Margin="274,0,0,0"/>
+        <Button Content="5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="103" Height="80" Click="Button_Click" Margin="377,0,0,0"/>
+        <Button Content="6" HorizontalAlignment="Left" VerticalAlignment="Top" Width="102" Height="81" Click="Button_Click" Margin="-34,80,0,0"/>
+        <Button Content="7" HorizontalAlignment="Left" VerticalAlignment="Top" Width="103" Height="81" Click="Button_Click" Margin="68,80,0,0"/>
+        <Button Content="8" HorizontalAlignment="Left" VerticalAlignment="Top" Width="103" Height="81" Click="Button_Click" Margin="171,80,0,0"/>
+        <Button Content="9" HorizontalAlignment="Left" VerticalAlignment="Top" Width="103" Height="81" Click="Button_Click" Margin="274,80,0,0"/>
+        <Button Content="10" HorizontalAlignment="Left" VerticalAlignment="Top" Width="103" Height="81" Click="Button_Click" Margin="377,80,0,0"/>
+        <Button Content="11" HorizontalAlignment="Left" VerticalAlignment="Top" Width="102" Height="81" Click="Button_Click" Margin="-34,160,0,0"/>
+        <Button Content="12" HorizontalAlignment="Left" VerticalAlignment="Top" Width="103" Height="81" Click="Button_Click" Margin="68,160,0,0"/>
+        <Button Content="13" HorizontalAlignment="Left" VerticalAlignment="Top" Width="103" Height="81" Click="Button_Click" Margin="171,160,0,0"/>
+        <Button Content="14" HorizontalAlignment="Left" VerticalAlignment="Top" Width="103" Height="81" Click="Button_Click" Margin="274,160,0,0"/>
+        <Button Content="15" HorizontalAlignment="Left" VerticalAlignment="Top" Width="103" Height="81" Click="Button_Click" Margin="377,160,0,0"/>
+        <Button Content="16" HorizontalAlignment="Left" VerticalAlignment="Top" Width="102" Height="81" Click="Button_Click" Margin="-34,241,0,0" Grid.RowSpan="2"/>
+        <Button Content="16" HorizontalAlignment="Left" VerticalAlignment="Top" Width="102" Height="81" Click="Button_Click" Margin="-34,241,0,0" Grid.RowSpan="2"/>
+        <Button Content="17" HorizontalAlignment="Left" VerticalAlignment="Top" Width="103" Height="81" Click="Button_Click" Margin="68,241,0,0" Grid.RowSpan="2"/>
+        <Button Content="18" HorizontalAlignment="Left" VerticalAlignment="Top" Width="103" Height="81" Click="Button_Click" Margin="171,241,0,0" Grid.RowSpan="2"/>
+        <Button Content="19" HorizontalAlignment="Left" VerticalAlignment="Top" Width="103" Height="81" Click="Button_Click" Margin="274,241,0,0" Grid.RowSpan="2"/>
+        <Button Content="20" HorizontalAlignment="Left" VerticalAlignment="Top" Width="103" Height="81" Click="Button_Click" Margin="377,241,0,0" Grid.RowSpan="2"/>
+        <Button Content="21" HorizontalAlignment="Left" VerticalAlignment="Top" Width="102" Height="80" Click="Button_Click" Margin="-34,47,0,0" RenderTransformOrigin="-2.571,1.584" Grid.Row="1"/>
+        <Button Content="22" HorizontalAlignment="Left" VerticalAlignment="Top" Width="103" Height="80" Click="Button_Click" Margin="68,47,0,0" RenderTransformOrigin="-2.571,1.584" Grid.Row="1"/>
+        <Button Content="23" HorizontalAlignment="Left" VerticalAlignment="Top" Width="103" Height="80" Click="Button_Click" Margin="171,47,0,0" RenderTransformOrigin="-2.571,1.584" Grid.Row="1"/>
+        <Button Content="24" HorizontalAlignment="Left" VerticalAlignment="Top" Width="103" Height="80" Click="Button_Click" Margin="274,47,0,0" RenderTransformOrigin="-2.571,1.584" Grid.Row="1"/>
+        <Button Content="25" HorizontalAlignment="Left" VerticalAlignment="Top" Width="103" Height="80" Click="Button_Click" Margin="377,47,0,0" RenderTransformOrigin="-2.571,1.584" Grid.Row="1"/>
+        <TextBlock x:Name="Tb" TextWrapping="Wrap" FontSize="40" RenderTransformOrigin="0.489,1.063" Margin="45,148.317,0,-55" Text="" Grid.Row="1"/>
+    </Grid>
 </Window>
